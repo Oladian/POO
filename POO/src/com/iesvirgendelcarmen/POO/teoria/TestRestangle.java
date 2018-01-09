@@ -73,5 +73,7 @@ public class TestRestangle {
 		}
 		return sum/arrayRectangles.length;
 	}
+	
+	//añadir la media de perimetros y la mayor area
 }
 
