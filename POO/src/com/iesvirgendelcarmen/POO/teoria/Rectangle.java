@@ -1,10 +1,11 @@
 package com.iesvirgendelcarmen.POO.teoria;
 
 public class Rectangle {
-	
+	//atributos o variables de instancia
 	private int height=3;
 	private int width=9;
 	
+	//getters y setters
 	public int getLength() {
 		return height;
 	}
@@ -21,8 +22,13 @@ public class Rectangle {
 		this.height = height;
 	}
 	
+	@Override
+	public String toString() {
+		return "Rectangle [height=" + height + ", width=" + width + "]";
+	}
+
 	public int getArea() {
-		return (height+width)*2;
+		return height*width;
 	}
 	
 }
