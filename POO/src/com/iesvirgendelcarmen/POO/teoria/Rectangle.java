@@ -22,15 +22,17 @@ public class Rectangle {
 		this.height = height;
 	}
 	
-	@Override
-	public String toString() {
-		return "Rectangle [height=" + height + ", width=" + width + "]";
-	}
 
 	public int getArea() {
 		return height*width;
 	}
 	
+	// Sobreescribe porque lo hereda del padre
+	@Override
+	public String toString() {
+		return "Rectangle [height=" + height + ", width=" + width + ", area="+getArea()+", perimeter= "+getPerimeter()+"]";
+	}
+
 	public int getPerimeter() {
 		return (height+width)*2;
 	}
