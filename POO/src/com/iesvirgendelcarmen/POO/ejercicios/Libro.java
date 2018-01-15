@@ -7,6 +7,15 @@ public class Libro {
 	private String genre;
 	private double price;
 	
+	public Libro(String author, int isbn, String genre, double price) {
+		this.author = author;
+		this.isbn = isbn;
+		this.genre = genre;
+		this.price = price;
+	}
+
+	public Libro() {} //constructor por defecto, ya NO lo crea java porque ya existe
+	
 	public String getAuthor() {
 		return author;
 	}

@@ -2,7 +2,11 @@ package com.iesvirgendelcarmen.POO.ejercicios;
 
 public class Word {
 
-	private String word="Esternocleidomastoideo";
+	private String word;
+	
+	public Word(String word) {
+		this.word = word;
+	}
 
 	public String getWord() {
 		return word;
@@ -12,9 +16,11 @@ public class Word {
 		return word.toUpperCase();
 	}
 	
+
 	public String toLowerCase() {
 		return word.toLowerCase();
 	}
+	
 	
 	public int wordLength() {
 		return word.length();

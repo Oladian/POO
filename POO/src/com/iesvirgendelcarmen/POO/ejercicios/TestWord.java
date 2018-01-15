@@ -3,7 +3,7 @@ package com.iesvirgendelcarmen.POO.ejercicios;
 public class TestWord {
 
 	public static void main(String[] args) {
-		Word word1 = new Word();
+		Word word1 = new Word("Esternocleidomastoideo");
 		
 		System.out.println(word1.toUpperCase());
 		System.out.println(word1.toLowerCase());

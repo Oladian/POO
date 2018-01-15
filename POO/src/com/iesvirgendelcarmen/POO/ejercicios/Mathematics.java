@@ -1,5 +1,6 @@
 package com.iesvirgendelcarmen.POO.ejercicios;
-import java.lang.Math;
+import static java.lang.Math.*; //NOS PERMITE UTILIZAR LOS MÉTODOS SIN USAR .Math PORQUE TIENE ASIGNADO EL ESPACIO DE NOMBRES
+import java.util.Random;
 
 public class Mathematics {
 	private double number;
@@ -13,18 +14,31 @@ public class Mathematics {
 	}
 	
 	public double squareRoot() {
-		return Math.sqrt(getNumber());
+		return sqrt(getNumber());
 	}
 	
 	public double cubeRoot() {
-		return Math.cbrt(getNumber());
+		return cbrt(abs(getNumber()));
 	}
 	
 	public int roundNumber() {
-		return (int)Math.round(getNumber());
+		
+		if(getNumber()<0) 
+			return (int) round(abs(-getNumber()));
+		else
+			return (int) round(abs(getNumber()));
 	}
 	
-	public int getRandomInterval(int roundNumber) {
-		return (int)Math.random()*roundNumber;
+	public int getARandomNumberToRoundNumber() {
+		int number = roundNumber();
+		int randomNumber = (int)(random()*(number+1));		
+		
+		return randomNumber; 
+	}
+	
+	
+	public int getRandomInterval() {
+		Random random = new Random();
+		return random.nextInt(roundNumber()+1);
 	}
 }
