@@ -11,37 +11,21 @@ public class RightTriangle {
 	}
 
 	public double getHypotenuse() {
-		return Math.sqrt((sideA*sideA)-(sideB*sideB));
+		//return Math.sqrt((sideA*sideA)+(sideB*sideB));
+		return Math.sqrt(Math.pow(sideA, 2)+Math.pow(sideB,2));
 	}
 	
 	public double getArea() {
-		return (sideA*sideB)/2;
+		return (sideA*sideB)/2.0;
 	}
 	
 	public double getPerimeter() {
-		return sideA+sideB+getHypotenuse();
+		return sideA+sideB+this.getHypotenuse();
 	}
-	
-	public double getSideA() {
-		return sideA;
-	}
-
-
-
-	public void setSideA(double sideA) {
-		this.sideA = sideA;
-	}
-
-
-
-	public double getSideB() {
-		return sideB;
-	}
-
-
-
-	public void setSideB(double sideB) {
-		this.sideB = sideB;
+		
+	@Override
+	public String toString() {
+		return "RightTriangle [sideA=" + sideA + ", sideB=" + sideB + ", Hypotenuse=" + (Math.round(getHypotenuse()*100))/100.0 + "]";
 	}
 
 }
